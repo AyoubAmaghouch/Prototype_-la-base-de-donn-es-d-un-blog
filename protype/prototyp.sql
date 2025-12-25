@@ -1,14 +1,9 @@
-/* ===============================
-   Création de la base de données
-   =============================== */
+/* Création de la base de données */
 
 CREATE DATABASE prototype;
 USE prototype;
 
-/* ===============================
-   Table UTILISATEUR
-   Stocke les informations des utilisateurs
-   =============================== */
+/*  Table UTILISATEUR*/
 
 CREATE TABLE utilisateur (
     id_utilisateur INT AUTO_INCREMENT PRIMARY KEY,
@@ -17,10 +12,7 @@ CREATE TABLE utilisateur (
     mot_de_passe VARCHAR(255) NOT NULL
 );
 
-/* ===============================
-   Table CATEGORIE
-   Stocke les catégories des articles
-   =============================== */
+/* Table CATEGORIE */
 
 CREATE TABLE categorie (
     id_categorie INT AUTO_INCREMENT PRIMARY KEY,
@@ -28,10 +20,7 @@ CREATE TABLE categorie (
     description TEXT
 );
 
-/* ===============================
-   Table ARTICLE
-   Stocke les articles du blog
-   =============================== */
+/*Table ARTICLE*/
 
 CREATE TABLE article (
     id_article INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,10 +32,7 @@ CREATE TABLE article (
     FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
     FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie)
 );
-/* ===============================
-   Table COMMENTAIRE
-   Stocke les commentaires des articles
-   =============================== */
+/*Table COMMENTAIRe */
 
 CREATE TABLE commentaire (
     id_commentaire INT AUTO_INCREMENT PRIMARY KEY,
@@ -54,6 +40,6 @@ CREATE TABLE commentaire (
     date_publication DATE,
     id_utilisateur INT NOT NULL,
     id_article INT NOT NULL,
-    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur), -- Lien avec utilisateur
-    FOREIGN KEY (id_article) REFERENCES article(id_article) -- Lien avec article
+    FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur),
+    FOREIGN KEY (id_article) REFERENCES article(id_article) 
 );
