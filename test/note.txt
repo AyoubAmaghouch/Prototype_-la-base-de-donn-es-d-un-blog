@@ -1,0 +1,39 @@
+1 3(les unput) 👍
+2 quantité👍
+3 mode laivraison👍
+----------------------
+1 prix (init ou float)👍
+2 quantité (int) 👍
+champ prix memno3 -
+champ quantité memno3 negéativ
+--------------------------------
+ila da ktr me 5 endo promo -10%
+ila total ktar me 1000dh promo -15%
+we ila dakhl code promo DEV10 endo -10
+we ila dakhl code promo SUPER20 -20
+-----------------------------------------
+si standard 0dh laivraison
+express 50dh
+si total 1500dh laivraison gratiut
+
+
+function conversion($prix,$devise){
+   $tauxeuro = 0.093;
+   $tauxdollar = 0.11;
+   $tauxlivre = 0.081;
+   if($devise === 'euro') return round($prix * $tauxeuro , 2) ;
+   if($devise === 'dollar') return round($prix * $tauxdollar , 2);    
+   if($devise === 'livre setrling') return round($prix * $tauxlivre , 2) ;
+}
+
+   if ($Codepromo == "PROMO10") {
+      $remise = 0.10;
+      echo "Code promo appliqué : 10% de réduction.<br>";
+   } elseif ($Codepromo == "PROMO20") {
+      $remise = 0.20;
+      echo "Code promo appliqué : 20% de réduction.<br>";
+   } else {
+      $remise = 0;
+      echo "Aucun code promo appliqué.<br>";
+   }
+   

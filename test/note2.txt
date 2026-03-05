@@ -1,0 +1,16 @@
+champ password
+button vérifier
+--------------
+L>8 -> 20P
+L>12 ->+10p
+1 MAJU -> 15
+1 MIN -> 15
+1 chifre -> 15
+1 caracyére spécaial -> 15
+NO espace -> 10p
+-----------------
+[array : 123456, azerty, password, admin…] black list tomb score to 0
+• 0-39 Faible
+• 40 – 69 Moyen
+• 70 – 89 Bon
+• 90 – 100 Très fort
